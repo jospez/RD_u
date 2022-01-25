@@ -1,0 +1,59 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+  batch: true
+  branches:
+    exclude:
+      - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0 
+  inputs:
+    versionSpec: '16.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run build
+
+- task: AzureRmWebAppDeployment@4
+  displayName: 'uMoney Digial Asset Vault Dev'
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'um-dev'
+    appType: 'webApp'
+    WebAppName: 'um-dev-digital-asset-vault'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/build'
+
+# - task: AzureRmWebAppDeployment@4
+#   displayName: 'uMoney Issuer Dev'
+#   inputs:
+#     ConnectionType: 'AzureRM'
+#     azureSubscription: 'um-dev'
+#     appType: 'webApp'
+#     WebAppName: 'um-dev-issuer'
+#     packageForLinux: '$(System.DefaultWorkingDirectory)/build'
+
+# - task: AzureRmWebAppDeployment@4
+#   displayName: 'Third Party Dev'
+#   inputs:
+#     ConnectionType: 'AzureRM'
+#     azureSubscription: 'um-dev'
+#     appType: 'webApp'
+#     WebAppName: 'um-dev-third-party'
+#     packageForLinux: '$(System.DefaultWorkingDirectory)/build'
+
+# - task: AzureRmWebAppDeployment@4
+#   displayName: 'uMoney SRM Dev'
+#   inputs:
+#     ConnectionType: 'AzureRM'
+#     azureSubscription: 'um-dev'
+#     appType: 'webApp'
+#     WebAppName: 'um-dev-srm'
+#     packageForLinux: '$(System.DefaultWorkingDirectory)/build'
