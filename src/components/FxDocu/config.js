@@ -1,0 +1,62 @@
+export const DEFAULT_FX_DOCU_CONTRACT_NAME = "CoDOCU_auto2";
+
+// todo adjust for prod
+export const DEFAULT_PROD_FX_DOCU_CONTRACT_NAME = "";
+
+export const PROD_MAP = {
+  // USDCHF: "0x8858355238CB2e9AdF34004229B684432b6823C3",
+  GBPCHF_v2: "0xE6aFEF13eFE96a719111CeeB49684CE8D52dEcAb",
+  // GBPCHF_v3: "0x16Ddfad0d944F175BA497f63b85370B4662563c4",
+};
+
+export const DEV_MAP = {
+  // USDHKD_v1: "0xf7d3f0a6a4cdfe7f0d13479d70382e48e1ed380a",
+  // EURUSD_v1: "0xE6b81f4073F7a4D43f5AaB561c68172C542A79C4",
+  // EURUSD_v2: "0xE8EBAbf5ff4A60b8A27f297EB6E0F1A7190Ec44f",
+  // DKKGBP_auto: "0x831186276D9706e712cCb98C92D2C17b6Deb370B",
+  // DKKGBP_auto2: "0xE9981CCc4e648eb95F65a3c46359aaCcDfE78b81",
+  // DKKGBP_manu: "0x824e3d51A304f6337102885C6AAdb005270e3AC1",
+  CoDOCU_auto1: "0x5A21a82943DE04A8Bf360da3CA51BC2944E2a886",
+  CoDOCU_auto2: "0x5077F2f887f288B4d5d446C38012155860C22946",
+};
+
+export const REALM_MAP = {
+  f55401: ["GBPCHF_v2"],
+  f55402: [
+    // "GBPCHF_v3",
+    "DKKGBP_manu",
+    "DKKGBP_auto",
+    "DKKGBP_auto2",
+    "EURUSD_v2",
+    "EURUSD_v1",
+    "USDHKD_v1",
+  ],
+  f55403: ["CoDOCU_auto2", "CoDOCU_auto1", "FD_v1", "FD_v2", "FD_v3"],
+};
+
+// todo below should use f555xx backends
+export const REALM_MAP_PROD = {
+  f55401: ["GBPCHF_v2"],
+  f55403: ["FD_v1"],
+};
+
+export const ARGS_DATES_FIELD_TO_INDEX = {
+  TRADE_DATE: 0,
+  VALUE_DATE: 1,
+};
+
+export const ARGS_AMOUNTS_FIELD_TO_INDEX = {
+  STRIKE: 0,
+  CONVERTED_AMOUNT: 1,
+  NON_CONVERTED_AMOUNT: 2,
+};
+
+export const ARGS_RATES_FIELD_TO_INDEX = {
+  COUPON: 0,
+};
+
+export const ARGS_STRINGS_FIELD_TO_INDEX = {
+  BASE_CURRENCY: 0,
+  QUOTE_CURRENCY: 1,
+  COMMENT: 2,
+};

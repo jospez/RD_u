@@ -1,0 +1,13 @@
+export const DEFAULT_FIDUCIARY_CONTRACT_NAME = "FD_v3";
+
+export const DEFAULT_PROD_FIDUCIARY_CONTRACT_NAME = "FD_v1";
+
+export const FD_DEV_MAP = {
+  // FD_v1: "0x92dfad4bdeff5639380ff737af595860504c9bfd",
+  FD_v2: "0x8472bb1d93b23b948206bf3da8ab22975108b43e",
+  FD_v3: "0xE6aFEF13eFE96a719111CeeB49684CE8D52dEcAb",
+};
+
+export const FD_PROD_MAP = {
+  FD_v1: "0x70Fa856AE0351e5ae608Fd0fe405ce83e800A7ad"
+};

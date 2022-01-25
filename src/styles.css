@@ -1,0 +1,82 @@
+div.indent {
+  text-indent: 50px;
+}
+
+.table-nonfluid {
+  width: auto !important;
+}
+
+.filter--active {
+  border-bottom: 1px solid black;
+}
+
+.thirdParty {
+  border-width: 12px;
+  border-color: blue;
+}
+
+@font-face {
+  font-family: 'inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/inter/Inter-Regular.woff2") format("woff2"),
+  url("assets/fonts/inter/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'interSemi';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/inter/Inter-SemiBold.woff2") format("woff2"),
+  url("assets/fonts/inter/Inter-SemiBold.woff") format("woff");
+}
+
+* {
+  font-size: 12px;
+  font-family: 'inter', Frutiger, Arial, Helvetica, sans-serif;
+}
+
+
+#navbar {
+  margin: 0;
+}
+
+#transferAsset {
+  margin-left: 40px;
+} 
+
+iframe{
+  overflow:hidden;
+}
+
+#header{
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.profile {
+  border-radius: 50%;
+  margin: auto;
+  margin-right: 24px;
+  margin-left: 12px;
+}
+
+.dropdown {
+  background: initial;
+  transition: background-color 200ms ease-in-out;
+}
+
+.dropdown:hover {
+  background-color: #c1c5c8;
+  border-radius: .2rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.app-vertical-center {
+  display: flex;
+  align-items: center;
+}
